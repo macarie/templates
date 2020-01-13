@@ -1,0 +1,55 @@
+{
+	"name": "project-name",
+	"version": "1.0.0",
+	"description": "A bit of description",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/macarie/project-name.git"
+	},
+	"bugs": {
+		"url": "https://github.com/macarie/project-name/issues"
+	},
+	"homepage": "https://github.com/macarie/project-name#readme",
+	"author": {
+		"name": "Raul Macarie",
+		"email": "raul@macarie.me",
+		"url": "https://macarie.me"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && nyc --reporter=lcov ava",
+		"coverage": "codecov"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [],
+	"devDependencies": {
+		"ava": "^2.4.0",
+		"codecov": "^3.6.1",
+		"nyc": "^15.0.0",
+		"prettier": "^1.19.1",
+		"xo": "^0.25.3"
+	},
+	"xo": {
+		"prettier": true,
+		"ignores": [
+			"*.ts"
+		]
+	},
+	"prettier": {
+		"semi": false,
+		"bracketSpacing": true,
+		"useTabs": true,
+		"endOfLine": "lf"
+	},
+	"ava": {
+		"require": [
+			"esm"
+		]
+	}
+}
